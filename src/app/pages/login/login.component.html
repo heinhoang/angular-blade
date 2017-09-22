@@ -1,3 +1,17 @@
-<p>
-  login works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+        <div class="form-group" [ngClass]="{'has-error': (!email.valid && email.touched), 'has-success': (email.valid && email.touched)}">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" [formControl]="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': (!password.valid && password.touched), 'has-success': (password.valid && password.touched)}">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" [formControl]="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <button type="submit" [disabled]="!form.valid" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
