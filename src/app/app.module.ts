@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRouting } from './app.routing';
 import { PagesModule } from './pages/pages.module';
-import { DashboardModule } from './pages/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
