@@ -1,5 +1,7 @@
 # Angular4Blade
 
+# This Project is not completed yet
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
 ## Development server
