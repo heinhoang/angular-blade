@@ -99,14 +99,14 @@ export class LayoutColumnComponent {
  */
 @Component({
   selector: 'app-layout',
-  styleUrls: ['./layout.component.css'],
+  styleUrls: ['./layout.component.scss'],
   template: `
     <ng-template #appLayoutTop></ng-template>
     <div class="scrollable-container">
       <div class="layout">
         <ng-content select="app-layout-header"></ng-content>
         <div class="layout__container">
-          <ng-content select="app-layout-sidebar"></ng-content>
+          <ng-content select="app-sidebar"></ng-content>
           <div class="layout__main">
             <div class="layout__collumns">
               <ng-content select="app-layout-column"></ng-content>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2, AfterViewInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar-header',
@@ -21,7 +21,7 @@ export class SidebarFooterComponent {
 @Component({
   selector: 'app-sidebar',
   template: `
-    <div class="sidebar__container">
+    <div class="sidebar">
       <ng-content select="app-sidebar-header"></ng-content>
       <div class="scrollable">
         <ng-content></ng-content>
@@ -29,13 +29,15 @@ export class SidebarFooterComponent {
       <ng-content select="app-sidebar-footer"></ng-content>
     </div>
   `,
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
 
-  constructor() { }
+  constructor(
+    protected elementRef: ElementRef,
+    protected renderer: Renderer2
+  ) {
 
-  ngOnInit() {
   }
 
 }
